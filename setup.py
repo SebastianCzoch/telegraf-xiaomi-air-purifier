@@ -23,7 +23,7 @@ setuptools.setup(
         'Development Status :: 4 - Beta',
         'Intended Audience :: System Administrators',
         'License :: OSI Approved :: MIT License',
-        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 3 :: Only',
         'Operating System :: OS Independent',
     ],
     packages=setuptools.find_packages(),

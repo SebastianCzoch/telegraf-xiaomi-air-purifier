@@ -25,7 +25,11 @@ def __handle_cli(args):
 
 def main(args):
     cli = __handle_cli(args)
-    sys.stdout.write(str(XiaomiAirPurifier().get_metric(cli.ip)))
+    try:
+        sys.stdout.write(str(XiaomiAirPurifier().get_metric(cli.ip)))
+    except Exception as e:
+        sys.stdout.write(str(e) + "\n")
+        sys.exit(1)
 
 
 if __name__ == '__main__':

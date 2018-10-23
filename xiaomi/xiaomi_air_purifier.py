@@ -26,4 +26,7 @@ class XiaomiAirPurifier:
 
     def __discover_token(self, ip):
         data = miio.device.Device.discover(ip)
+        if data is None:
+            raise Exception("Device not found, or it's not supported")
+
         return data.checksum.hex()
