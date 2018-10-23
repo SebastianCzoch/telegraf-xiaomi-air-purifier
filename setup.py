@@ -28,7 +28,7 @@ setuptools.setup(
     ],
     packages=setuptools.find_packages(),
     install_requires=read_file('requirements.txt').splitlines(),
-    scripts=['telegraf-xiaomi-ait-purifier'],
+    scripts=['telegraf-xiaomi-air-purifier'],
     setup_requires=[
         "flake8"
     ]
