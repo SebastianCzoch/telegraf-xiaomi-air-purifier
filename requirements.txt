@@ -1,0 +1,2 @@
+influx-line-protocol>=0.1.0
+python-miio>=0.4.2
