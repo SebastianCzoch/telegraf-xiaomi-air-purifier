@@ -8,16 +8,10 @@ from xiaomi import XiaomiAirPurifier
 if not sys.warnoptions:
         warnings.simplefilter("ignore")
 
+
 def __handle_cli(args):
     parser = argparse.ArgumentParser(
         description='Telegraf plugin for Xiaomi Air Purifier')
-
-    parser.add_argument(
-        '--token',
-        help='Device token',
-        default=None,
-        required=True
-    )
 
     parser.add_argument(
         '--ip',
@@ -31,7 +25,7 @@ def __handle_cli(args):
 
 def main(args):
     cli = __handle_cli(args)
-    sys.stdout.write(str(XiaomiAirPurifier.get_metric(cli.ip, cli.token)))
+    sys.stdout.write(str(XiaomiAirPurifier().get_metric(cli.ip)))
 
 
 if __name__ == '__main__':

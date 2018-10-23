@@ -4,8 +4,8 @@ from influx_line_protocol import Metric
 
 class XiaomiAirPurifier:
 
-    def get_metric(ip, token):
-
+    def get_metric(self, ip):
+        token = self.__discover_token(ip)
         data = miio.airpurifier.AirPurifier(ip, token).status()
         metric = Metric("xiaomi-air-purifier")
 
@@ -22,7 +22,8 @@ class XiaomiAirPurifier:
         metric.add_value("temperature", data.temperature)
         metric.add_value("use_time", data.use_time)
 
-
         return metric
 
-
+    def __discover_token(self, ip):
+        data = miio.device.Device.discover(ip)
+        return data.checksum.hex()
