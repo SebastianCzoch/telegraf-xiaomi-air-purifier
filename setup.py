@@ -14,7 +14,7 @@ setuptools.setup(
     description='Telegraf plugin for Xiaomi Air Purifier',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    version='0.1.1',
+    version='0.1.2',
     url='https://github.com/SebastianCzoch/telegraf-xiaomi-air-purifier',
     author='Sebastian Czoch',
     author_email='sebastian@czoch.pl',
