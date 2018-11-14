@@ -20,13 +20,20 @@ def __handle_cli(args):
         required=True
     )
 
+    parser.add_argument(
+        '--token',
+        help='Device token',
+        default=None,
+        required=False
+    )
+
     return parser.parse_args(args)
 
 
 def main(args):
     cli = __handle_cli(args)
     try:
-        sys.stdout.write(str(XiaomiAirPurifier().get_metric(cli.ip)))
+        sys.stdout.write(str(XiaomiAirPurifier().get_metric(cli.ip, cli.token)))
     except Exception as e:
         sys.stdout.write(str(e) + "\n")
         sys.exit(1)
