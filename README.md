@@ -2,6 +2,7 @@
 [![Build Status](https://travis-ci.org/SebastianCzoch/telegraf-xiaomi-air-purifier.svg?branch=master)](https://travis-ci.org/SebastianCzoch/telegraf-xiaomi-air-purifier/branches) [![PyPI version](https://badge.fury.io/py/telegraf-xiaomi-air-purifier.svg)](https://badge.fury.io/py/telegraf-xiaomi-air-purifier) [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/SebastianCzoch/telegraf-xiaomi-air-purifier/blob/master/LICENSE)
 
 Telegraf plugin for the Xiaomi Air Purifier (supports versions: 2, 2pro, 2s)
+For 2s version you have to provide `--token` option
 
 ## Requirements
 - Device have to be accesable (in the same network)
